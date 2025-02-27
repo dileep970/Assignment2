@@ -1,0 +1,380 @@
+llama3.2
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py zero1.py
+
+---- Zero-Shot Prompt ----
+I'd be happy to explain these basic Python programs in detail for a beginner.
+
+**Program 1: Swapping Two Numbers**
+
+Swapping two numbers means exchanging their values without using a temporary variable. This is useful when you need to work with both numbers simultaneously, such as in arithmetic operations.
+
+### How it works:
+
+To swap two numbers, we use the following steps:
+
+1. Store the value of one number in a variable.
+2. Assign the value of the other number to the first variable.
+3. Assign the stored value back to the second variable.
+
+Here's an example code snippet that swaps two numbers:
+```python
+# Define two variables with initial values
+num1 = 5
+num2 = 10
+
+# Print the original values
+print("Original Values:")
+print(f"Number 1: {num1}")
+print(f"Number 2: {num2}")
+
+# Swap the values using a temporary variable (not necessary in this case)
+temp = num1
+num1 = num2
+num2 = temp
+
+# Print the swapped values
+print("\nSwapped Values:")
+print(f"Number 1: {num1}")
+print(f"Number 2: {num2}")
+```
+In Python, we can swap two numbers without using a temporary variable by simply reassigning one number to another. Here's an equivalent code snippet:
+```python
+# Define two variables with initial values
+num1 = 5
+num2 = 10
+
+# Print the original values
+print("Original Values:")
+print(f"Number 1: {num1}")
+print(f"Number 2: {num2}")
+
+# Swap the values directly using reassignment
+num1, num2 = num2, num1
+
+# Print the swapped values
+print("\nSwapped Values:")
+print(f"Number 1: {num1}")
+print(f"Number 2: {num2}")
+```
+As you can see, the second approach is more concise and efficient.
+
+**Program 2: Addition, Subtraction, and Multiplication**
+
+This program performs basic arithmetic operations on two numbers. It takes two inputs from the user, adds, subtracts, or multiplies them, and prints the result.
+
+### How it works:
+
+To perform these operations, we need to define a function that accepts two numbers as arguments. Inside the function, we use the `+`, `-`, or `*` operators to calculate the result based on the operation specified by the user.
+
+Here's an example code snippet:
+```python
+def arithmetic_operation():
+    # Get input from the user for the first number
+    num1 = float(input("Enter the first number: "))
+
+    # Get input from the user for the second number and operation
+    print("\nChoose an operation:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    choice = int(input("Enter your choice (1/2/3): "))
+
+    if choice == 1:
+        num2 = float(input("Enter the second number: "))
+        result = num1 + num2
+        operation = "+"
+    elif choice == 2:
+        num2 = float(input("Enter the second number: "))
+        result = num1 - num2
+        operation = "-"
+    else:
+        num2 = float(input("Enter the second number: "))
+        result = num1 * num2
+        operation = "*"
+
+    # Print the result and operation
+    print(f"\nResult: {result} {operation}")
+
+# Call the function to start the program
+arithmetic_operation()
+```
+This code defines a function `arithmetic_operation()` that takes no arguments. It prompts the user for input, performs the chosen operation, and prints the result.
+
+**Program 3: Checking if a String is a Palindrome**
+
+A palindrome is a string that reads the same backward as forward. This program checks whether a given string is a palindrome or not.        
+
+### How it works:
+
+To check if a string is a palindrome, we can iterate over its characters from both ends and compare them. If they match, then the string is a palindrome.
+
+Here's an example code snippet:
+```python
+def is_palindrome(s):
+    # Convert the string to lowercase for case-insensitive comparison
+    s = s.lower()
+
+    # Initialize two pointers at the start and end of the string
+    left = 0
+    right = len(s) - 1
+
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+
+    return True
+
+# Test the function with a palindrome
+print("\nIs 'madam' a palindrome?", is_palindrome("madam"))
+
+# Test the function with a non-palindrome
+print("\nIs 'hello' a palindrome?", is_palindrome("hello"))
+```
+In this code, we define a function `is_palindrome()` that takes a string `s` as input. We convert it to lowercase and initialize two pointers, `left` and `right`, at the start and end of the string, respectively.
+
+We then enter a loop where we compare characters at the `left` and `right` indices. If they match, we increment `left` and decrement `right`. If they don't match, we return `False`.
+
+If the loop completes without finding any mismatches, we return `True`, indicating that the string is a palindrome.
+
+I hope these explanations help you understand basic Python programs!
+Time taken: 106.514s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py Chain1.py
+
+---- Chain of Thought Prompt ----
+I'd be happy to explain each of these programs in detail, starting from the basics.
+
+**Step 1: Understanding Swapping Two Numbers**
+
+Imagine you have two variables, let's call them `x` and `y`. You want to swap their values, so that `x` now holds the value of `y`, and vice versa. This is called "swapping" or "exchanging" the values.
+
+In Python, we can use a simple trick to do this:
+
+```python
+# Original values
+x = 5
+y = 10
+
+# Swap x and y
+x, y = y, x
+
+print("After swapping:")
+print(f"x = {x}")  # Output: x = 10
+print(f"y = {y}")  # Output: y = 5
+```
+
+In this code:
+
+* We assign the original values of `x` and `y` to two separate lines (`x = 5` and `y = 10`).
+* Then, we use a trick called "tuple packing" and "tuple unpacking". This allows us to swap the values in one line.
+* The `(y, x)` part is creating a tuple with the values of `y` and `x`. The `= y, x` part assigns this tuple back to the variables `x` and `y`, effectively swapping their values.
+
+**Step 2: Understanding Addition, Subtraction, and Multiplication**
+
+Now that we have our variables, let's talk about basic arithmetic operations. These are:
+
+* **Addition**: Adding two numbers together.
+* **Subtraction**: Subtracting one number from another.
+* **Multiplication**: Repeating a number a certain number of times.
+
+Let's use Python to see how these work:
+
+```python
+# Addition
+x = 5
+y = 3
+result_add = x + y
+print(f"Addition: {x} + {y} = {result_add}")  # Output: Addition: 5 + 3 = 8
+
+# Subtraction
+z = 10
+w = 4
+result_sub = z - w
+print(f"Subtraction: {z} - {w} = {result_sub}")  # Output: Subtraction: 10 - 4 = 6
+
+# Multiplication
+a = 2
+b = 6
+result_mul = a * b
+print(f"Multiplication: {a} * {b} = {result_mul}")  # Output: Multiplication: 2 * 6 = 12
+```
+
+In this code:
+
+* We define two variables, `x` and `y`, and perform an addition operation using the `+` operator.
+* We then define two more variables, `z` and `w`, and perform a subtraction operation using the `-` operator.
+* Finally, we define two more variables, `a` and `b`, and perform a multiplication operation using the `*` operator.
+
+**Step 3: Implementing a Function to Check if a String is a Palindrome**
+
+A palindrome is a string that reads the same backwards as forwards. For example, "madam" or "radar" are palindromes.
+
+Let's write a Python function to check if a given string is a palindrome:
+
+```python
+def is_palindrome(s):
+    # Remove any spaces and punctuation, and convert to lowercase
+    s = ''.join(e for e in s if e.isalnum()).lower()
+
+    # Compare the string with its reverse
+    return s == s[::-1]
+
+# Test the function
+print(is_palindrome("madam"))  # Output: True
+print(is_palindrome("hello"))  # Output: False
+```
+
+In this code:
+
+* We define a function called `is_palindrome` that takes a string `s` as input.
+* Inside the function, we remove any spaces and punctuation from the string using a list comprehension, and convert it to lowercase using the `lower()` method.
+* We then compare the cleaned-up string with its reverse (`s[::-1]`). If they're the same, the string is a palindrome!
+* Finally, we test the function with two example strings: "madam" (which is a palindrome) and "hello" (which is not).
+Time taken: 82.647s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py Few1.py
+
+---- Few-Shot Prompt ----
+I can help with that, but I don't see any additional Python programs provided. Please provide the next program you'd like me to explain in detail, and I'll be happy to assist you.
+
+If you're ready to proceed with the "Swapping Two Numbers" example already covered, here's a more detailed explanation:
+
+### Example 1: Swapping Two Numbers
+
+**Concept**: Swap values of two variables without using a third variable.
+
+**Code**:
+```python
+a, b = 5, 10
+a, b = b, a
+print(a, b)  # Output: 10, 5
+```
+**Step-by-Step Explanation**:
+
+1. **Variable Initialization**: We assign initial values to `a` and `b`. In this case, `a` is set to 5 and `b` is set to 10.
+
+2. **Tuple Unpacking**: When we use `a, b = b, a`, Python performs tuple unpacking. This process involves:
+   - Creating a temporary tuple `(b, a)`.
+   - Assigning the values from this tuple back into the variables `a` and `b`.
+
+3. **Swap Occurs**: Due to the nature of tuple unpacking, the assignment is done as follows:
+   - The value of `b` (which is 10) becomes the new value for `a`.
+   - The value of `a` (which was 5) becomes the new value for `b`.
+
+4. **Final Output**: After the swap operation, we print the values of `a` and `b`. Now, `a` contains the original value of `b`, which is 10, and `b` contains the original value of `a`, which is 5.
+
+This program effectively swaps the values of two variables without requiring a third variable. The swap operation happens implicitly when using tuple unpacking in this assignment statement.
+Time taken: 36.36s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py prompt1.py
+
+---- Prompt Template ----
+**Understanding Basic Python Programs**
+
+### Explanation
+
+#### Swapping Two Numbers
+
+In this example, we are swapping the values of two variables `a` and `b`. We use a simple trick where we assign the value of `b` to `a`, and then the value of `a` (which is now `b`) to `b`.
+
+```python
+# Swapping Two Numbers
+a, b = 5, 10
+```
+
+Here, we are assigning the values 5 and 10 to `a` and `b`, respectively.
+
+```python
+# Swap values using tuple assignment
+a, b = b, a
+print(a, b)  # Output: 10, 5
+```
+
+In this step, we assign the value of `b` (which is 10) to `a`, and then assign the value of `a` (which is now 10) to `b`. This effectively swaps their values.
+
+#### Addition, Subtraction, and Multiplication
+
+This example demonstrates basic arithmetic operations in Python. We add, subtract, and multiply two numbers together.
+
+```python
+# Addition, Subtraction, and Multiplication
+a, b = 4, 2
+```
+
+Here, we are assigning the values 4 and 2 to `a` and `b`, respectively.
+
+```python
+# Perform arithmetic operations
+print(a + b, a - b, a * b)  # Output: 6, 2, 8
+```
+
+In this step, we perform addition (`+`), subtraction (`-`), and multiplication (`*`) between the values of `a` (4) and `b` (2). The results are then printed.
+
+#### Checking if a String is a Palindrome
+
+A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization. In this example, we define a function `is_palindrome` to check if a given string is a palindrome.
+
+```python
+# Palindrome Checking
+def is_palindrome(s):
+      return s == s[::-1]
+```
+
+Here, we are defining a function called `is_palindrome`. The function takes a string `s` as input and checks if it's equal to its reverse (`s[::-1]`). If they're equal, the function returns `True`, indicating that the string is a palindrome. Otherwise, it returns `False`.        
+
+```python
+# Test the palindrome function
+print(is_palindrome('madam'))  # Output: True
+```
+
+In this step, we test our `is_palindrome` function with the input 'madam'. Since 'madam' reads the same forward and backward, ignoring spaces, punctuation, and capitalization, the function returns `True`, indicating that 'madam' is a palindrome.
+
+### Example Code
+
+```python
+# Swapping Two Numbers
+a, b = 5, 10
+a, b = b, a
+print(a, b)  # Output: 10, 5
+
+# Addition, Subtraction, and Multiplication
+a, b = 4, 2
+print(a + b, a - b, a * b)  # Output: 6, 2, 8
+
+# Palindrome Checking
+def is_palindrome(s):
+      return s == s[::-1]
+print(is_palindrome('madam'))  # Output: True
+```
+
+### Step-by-Step Execution
+
+**Swapping Two Numbers**
+
+1. We assign the values 5 and 10 to `a` and `b`, respectively.
+2. We use tuple assignment to swap their values, effectively assigning 10 to `a` and 5 to `b`.
+3. The output is printed as (10, 5), showing that the values have been swapped.
+
+**Addition, Subtraction, and Multiplication**
+
+1. We assign the values 4 and 2 to `a` and `b`, respectively.
+2. We perform arithmetic operations between `a` and `b`.
+3. The results are printed as (6, 2, 8), showing that addition (`+`), subtraction (`-`), and multiplication (`*`) have been performed correctly.
+
+**Palindrome Checking**
+
+1. We define a function called `is_palindrome` to check if a given string is a palindrome.
+2. Inside the function, we use slicing (`s[::-1]`) to get the characters of the input string in reverse order.
+3. We compare the original string with its reversed version using equality (`==`).
+4. If they're equal, the function returns `True`, indicating that the string is a palindrome. Otherwise, it returns `False`.
+
+### Expected Output
+
+The expected output for each code snippet is:
+
+* Swapping Two Numbers: (10, 5)
+* Addition, Subtraction, and Multiplication: (6, 2, 8)
+* Palindrome Checking: True
+Time taken: 104.895s
