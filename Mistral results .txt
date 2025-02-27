@@ -1,0 +1,407 @@
+Mistral
+
+PS C:\Users\hp\Downloads\prompt-eng-main> cd C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py zero2.py
+
+---- Zero-Shot Prompt ----
+1. Swapping Two Numbers:
+
+Swapping two numbers in Python can be achieved by using a temporary variable to hold the value of one number, then assigning the other number to that variable and finally assigning the initial number back to the original variable. Here's an example:
+
+```python
+# Initialize the two numbers
+num1 = 5
+num2 = 10
+
+# Swap the values
+temp = num1
+num1 = num2
+num2 = temp
+
+# Print the swapped numbers
+print("Number 1 after swapping: ", num1)
+print("Number 2 after swapping: ", num2)
+```
+
+In this example, we initialize two numbers (5 and 10). We then create a temporary variable called `temp`, assign it the value of `num1` (5), then swap the values by assigning `num2` to `num1` and `temp` to `num2`. Finally, we print out the swapped values.
+
+  2. Addition, Subtraction, and Multiplication:
+
+Addition, subtraction, and multiplication in Python can be performed using the `+`, `-`, and `*` operators respectively. Here's an example for each operation:
+
+```python
+# Addition
+num1 = 5
+num2 = 3
+sum = num1 + num2
+print("The sum is:", sum)
+
+# Subtraction
+subtract = num1 - num2
+print("The difference is:", subtract)
+
+# Multiplication
+multiply = num1 * num2
+print("The product is:", multiply)
+```
+
+In this example, we initialize two numbers (5 and 3), then perform addition, subtraction, and multiplication on them using the `+`, `-`, and `*` operators respectively. We store the results in variables called `sum`, `subtract`, and `multiply` and print out the results for each operation.
+
+  3. Checking if a String is a Palindrome:
+
+A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward. In Python, you can check if a string is a palindrome by comparing it with its reverse. Here's an example:
+
+```python
+# Define the input string
+input_string = "racecar"
+
+# Reverse the input string
+reversed_string = input_string[::-1]
+
+# Check if the original and reversed strings are equal
+```python
+# Define the input string
+input_string = "racecar"
+
+# Reverse the input string
+reversed_string = input_string[::-1]
+
+# Check if the original and reversed strings are equal
+# Define the input string
+input_string = "racecar"
+
+# Reverse the input string
+reversed_string = input_string[::-1]
+
+# Check if the original and reversed strings are equal
+input_string = "racecar"
+
+# Reverse the input string
+reversed_string = input_string[::-1]
+
+# Check if the original and reversed strings are equal
+if input_string == reversed_string:
+# Reverse the input string
+reversed_string = input_string[::-1]
+
+# Check if the original and reversed strings are equal
+if input_string == reversed_string:
+    print(f"The input '{input_string}' is a palindrome.")
+else:
+
+# Check if the original and reversed strings are equal
+if input_string == reversed_string:
+    print(f"The input '{input_string}' is a palindrome.")
+else:
+# Check if the original and reversed strings are equal
+if input_string == reversed_string:
+    print(f"The input '{input_string}' is a palindrome.")
+else:
+    print(f"The input '{input_string}' is not a palindrome.")
+```
+if input_string == reversed_string:
+    print(f"The input '{input_string}' is a palindrome.")
+else:
+    print(f"The input '{input_string}' is not a palindrome.")
+```
+    print(f"The input '{input_string}' is a palindrome.")
+else:
+    print(f"The input '{input_string}' is not a palindrome.")
+```
+
+In this example, we define an input string `racecar`, which is a palindrome. We then use slicing to reverse the input string by using `[::-1]`. Finally, we check if the original and reversed strings are equal, and if they are, print out that the     print(f"The input '{input_string}' is not a palindrome.")
+```
+
+In this example, we define an input string `racecar`, which is a palindrome. We then use slicing to reverse the input string by using `[::-1]`. Finally, we check if the original and reversed strings are equal, and if they are, print out that the 
+
+In this example, we define an input string `racecar`, which is a palindrome. We then use slicing to reverse the input string by using `[::-1]`. Finally, we check if the original and reversed strings are equal, and if they are, print out that the g by using `[::-1]`. Finally, we check if the original and reversed strings are equal, and if they are, print out that the string is a palindrome. If not, it means the string is not a palindrome.
+Time taken: 160.949s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py Chain2.py
+
+---- Chain of Thought Prompt ----
+1. Swapping two numbers:
+
+In our daily lives, we often need to exchange or interchange the positions of two items. In programming, this concept is called "swapping" or "interchanging". Let's take an example with two variables `num1` and `num2`. Initially, they have some values. After swapping, their values get interchanged.
+
+Here's a simple Python code snippet that demonstrates swapping:
+
+```python
+# Initialize two numbers
+num1 = 5
+num2 = 7
+
+print("Before swapping: num1 =", num1, "and num2 =", num2)
+
+# Swap the values
+temp = num1 # Store num1 in a temporary variable
+num1 = num2 # Assign num2 to num1
+num2 = temp  # Assign temp (storing num1 initially) to num2
+
+print("After swapping: num1 =", num1, "and num2 =", num2)
+```
+
+Upon running this code, you'll see the output as follows:
+
+Before swapping: num1 = 5 and num2 = 7
+After swapping: num1 = 7 and num2 = 5
+
+In this example, we first print the initial values of `num1` and `num2`. Then, we store the value of `num1` in a temporary variable (`temp`) to save its value. Next, we assign the value of `num2` to `num1`, effectively swapping their values. Finally, we assign the saved value from the temporary variable (which initially stored num1) to `num2`.
+
+2. Addition, subtraction, and multiplication:
+
+In mathematics, we perform operations like addition, subtraction, and multiplication on numbers. In programming, these concepts are applied using arithmetic operators. Here's an overview of the basic arithmetic operators in Python:
+
+- `+` is used for addition (e.g., 2 + 3 gives 5)
+- `-` is used for subtraction (e.g., 7 - 2 gives 5)
+- `*` is used for multiplication (e.g., 3 * 4 gives 12)
+- `/` is used for division (e.g., 6 / 2 gives 3)
+- `//` is used for floor division, which returns the largest integer less than or equal to the result of the division (e.g., 6 // 2 gives 3)
+- `%` is used for modulus operation, which gives the remainder after dividing one number by another (e.g., 7 % 3 gives 1)  
+
+Here's an example demonstrating these operations:
+
+```python
+# Perform arithmetic operations on two numbers
+num1 = 5
+num2 = 3
+
+print("Addition:", num1 + num2) # Addition
+print("Subtraction:", num1 - num2) # Subtraction
+print("Multiplication:", num1 * num2) # Multiplication
+print("Floor division:", num1 // num2) # Floor Division
+print("Modulus:", num1 % num2) # Modulus
+```
+
+Upon running this code, you'll see the output as follows:
+
+Addition: 8
+Subtraction: 2
+Multiplication: 15
+Floor division: 2
+Modulus: 1
+
+3. Implement a function to check if a string is a palindrome:
+
+In simple terms, a "palindrome" is a word or phrase that reads the same backward as forward. For example, "racecar", "level", and "madam" are all palindromes. In Python, we can create a function to check whether a given string is a palindrome or not:
+
+```python
+def is_palindrome(s):
+    # Check if the length of the string is even or odd
+    if len(s) % 2 == 0:
+        half = len(s) // 2
+    else:
+        half = (len(s) + 1) // 2
+
+    # Iterate through the first half and last half of the string, comparing characters
+    for i in range(half):
+        if s[i] != s[-i - 1]:
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+    # Check if the length of the string is even or odd
+    if len(s) % 2 == 0:
+        half = len(s) // 2
+    else:
+        half = (len(s) + 1) // 2
+
+    # Iterate through the first half and last half of the string, comparing characters
+    for i in range(half):
+        if s[i] != s[-i - 1]:
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+    if len(s) % 2 == 0:
+        half = len(s) // 2
+    else:
+        half = (len(s) + 1) // 2
+
+    # Iterate through the first half and last half of the string, comparing characters
+    for i in range(half):
+        if s[i] != s[-i - 1]:
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+    else:
+        half = (len(s) + 1) // 2
+
+    # Iterate through the first half and last half of the string, comparing characters
+    for i in range(half):
+        if s[i] != s[-i - 1]:
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+
+    # Iterate through the first half and last half of the string, comparing characters
+    for i in range(half):
+        if s[i] != s[-i - 1]:
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+            return False
+
+    # If we make it to the end without finding any mismatches, the string is a palindrome
+    return True
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+
+# Test cases
+print("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+This function takes a string as input and checks if it's a palindrome by comparing the first half of the string with the laprint("is_palindrome('level')", is_palindrome('level')) # Should output True
+print("is_palindrome('hello')", is_palindrome('hello')) # Should output False
+```
+
+This function takes a string as input and checks if it's a palindrome by comparing the first half of the string with the la
+
+This function takes a string as input and checks if it's a palindrome by comparing the first half of the string with the last half. If any characters don't match, the function returns `False`. If no mismatches are found, it returns `True`, indicating that the string is indeed a palindrome.
+Time taken: 246.907s
+This function takes a string as input and checks if it's a palindrome by comparing the first half of the string with the last half. If any characters don't match, the function returns `False`. If no mismatches are found, it returns `True`, indicating that the string is indeed a palindrome.
+Time taken: 246.907s
+st half. If any characters don't match, the function returns `False`. If no mismatches are found, it returns `True`, indicating that the string is indeed a palindrome.
+Time taken: 246.907s
+ting that the string is indeed a palindrome.
+Time taken: 246.907s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py Few2.py
+
+---- Few-Shot Prompt ----
+ ### Example 2: Finding Factorial of a Number
+**Concept**: Calculate the factorial of a given number (a non-negative integer). The factorial of a number is the product of all integers from that number to 1. For example, the factorial of 5 (written as 5!) is 1*2*3*4*5 = 120
+**Code**:
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+num = int(input("Enter a number: "))
+result = factorial(num)
+print("Factorial of", num, "is:", result)
+```
+**Explanation**: This program defines a function called `factorial` that takes an integer as its argument. The function checks if the input number is 0 and returns 1 in this case (since the factorial of 0 is defined to be 1). Otherwise, it recursively multiplies the input number by the factorial of the input number minus one until reaching 0.
+
+The program then asks the user for a number using `input()` function and assigns it to the variable `num`. After that, it calls the `factorial` function with the entered number as an argument, stores the result in the `result` variable, and finally prints the factorial of the entered number.
+
+### Example 3: Finding the Largest Number Among Three
+**Concept**: Find the largest number among three given numbers.
+**Code**:
+```python
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+if num1 > num2 and num1 > num3:
+    print(num1, "is the largest number.")
+elif num2 > num1 and num2 > num3:
+    print(num2, "is the largest number.")
+else:
+    print(num3, "is the largest number.")
+```
+**Explanation**: This program takes three numbers as inputs from the user using the `input()` function. It then uses an if-elif-else statement to compare each pair of the given numbers and find out which one is the greatest among them. The largest number is printed accordingly. If all three numbers are equal, none of the conditions will be true, so the program will not enter any branch of the if-elif-else statement and won't print anything in that case.
+
+In this code snippet, the `and` operator checks if both conditions are true (i.e., comparing two variables and checking which one is greater), while the `or` operator allows either or both conditions to be true (in this example, it would not make a difference since we only have one condition for each branch of the if-elif-else statement).
+Time taken: 142.322s
+
+PS C:\Users\hp\Downloads\prompt-eng-main\prompt-eng-main\prompt-eng\project> py Prompt2.py
+
+---- Prompt Template ----
+**Title**: Understanding Basic Python Programs
+
+**Explanation**: In this tutorial, we'll explore three fundamental Python programs: swapping two numbers, performing arithmetic operations, and checking if a string is a palindrome.
+
+1. Swapping Two Numbers:
+   - Initially, we have two variables `a` and `b`, assigned values 5 and 10 respectively.
+   - By using the assignment operator (=), we swap their values: `a, b = b, a`. Now `a` holds the value of `b` (10) and `b` holds the value of `a` (5).
+   - Finally, we print the updated values of `a` and `b`, which results in 10, 5.
+
+2. Addition, Subtraction, and Multiplication:
+   - We have two variables `a` and `b`, assigned values 4 and 2 respectively.
+   - Using the arithmetic operators (+ for addition, - for subtraction, * for multiplication), we perform operations on these variables and print their results.
+   - The output will be: 6 (sum of `a` and `b`), 2 (difference between `a` and `b`), and 8 (product of `a` and `b`).       
+
+3. Checking if a String is a Palindrome:
+   - We define a function called `is_palindrome(s)`, which takes a string as an argument `s`.
+   - Inside the function, we use slicing to compare the original string with its reverse (`s[::-1]`). If the original string is equal to its reverse, it means the given string is a palindrome and the function returns `True`. Otherwise, it returns `False`.
+   - We test our function by checking if 'madam' is a palindrome. Since 'madam' equals 'madam' in reverse, the function will return `True`.
+
+**Example Code**:
+```python
+# Swapping Two Numbers
+a, b = 5, 10
+a, b = b, a
+print(a, b)  # Output: 10, 5
+
+# Addition, Subtraction, and Multiplication
+a, b = 4, 2
+print(a + b, a - b, a * b)  # Output: 6, 2, 8
+
+# Palindrome Checking
+def is_palindrome(s):
+    return s == s[::-1]
+print(is_palindrome('madam'))  # Output: True
+```
+
+**Step-by-Step Execution**:
+
+1. Swapping Two Numbers:
+   - Assignment of `a` (5) and `b` (10): (5, 10)
+   - Swap operation: (10, 5)
+   - Printing the updated values: (10, 5)
+
+2. Addition, Subtraction, and Multiplication:
+   - Assignment of `a` (4) and `b` (2): (4, 2)
+   - Performing arithmetic operations and printing their results: (6, 2, 8)
+
+3. Checking if a String is a Palindrome:
+   - Function definition with input parameter `s`: None
+   - Comparison of the original string 'madam' with its reverse ('madam'): True
+   - Printing the function result: True
+
+**Expected Output**: When each code is executed, you should see the following outputs:
+- Swapping Two Numbers: 10, 5
+- Addition, Subtraction, and Multiplication: 6, 2, 8
+- Palindrome Checking: True
+Time taken: 214.932s
