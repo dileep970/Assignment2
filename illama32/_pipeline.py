@@ -158,7 +158,7 @@ def model_req(payload=None):
 ### DEBUG
 ###
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     from _pipeline import create_payload, model_req
     MESSAGE = "1 + 2"
     PROMPT = MESSAGE 
@@ -166,9 +166,9 @@ if _name_ == "_main_":
                          target="ollama",   
                          model="llama3.2:latest", 
                          prompt=PROMPT, 
-                         temperature=1.0, 
-                         num_ctx=5555555, 
-                         num_predict=1)
+                         temperature=0.5, 
+                         num_ctx=2048, 
+                         num_predict=10)
 
     time, response = model_req(payload=payload)
     print(response)
