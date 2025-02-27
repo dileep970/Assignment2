@@ -2,7 +2,7 @@
 
 Exploring the efficiency of various prompt engineering techniques for explaining Python programs using LLMs.
 
-Authors: NAME1:Sushma Kondamareddy, NAME2:Dileep Kumar Mangali, NAME3:Govardhan Reddy Koppula
+Authors: NAME1:Dileep Kumar Mangali[https://github.com/dileep970/Assignment2], NAME2:Sushma Kondamareddy, NAME3:Govardhan Reddy Koppula
 
 Academic Supervisor: Dr. Fernando Koch
 
